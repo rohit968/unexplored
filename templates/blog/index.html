@@ -1,0 +1,17 @@
+{% extends "blog/main.html" %}
+{% load static %}
+
+{% block content %}
+	<div class="section mainImage">	
+	</div>
+
+	<div class="section">
+		<h3 class="mainHeading ml-10 mt-10 text-5xl">Recent Posts</h3>
+	</div>
+
+	<div class="section mt-5">
+		{% include "blog/display_post.html" %}
+	</div>
+
+
+{% endblock %}

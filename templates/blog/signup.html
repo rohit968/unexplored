@@ -1,0 +1,47 @@
+{% extends "blog/main.html" %}
+{% load static %}
+
+{% block content %}
+	
+	<div class="section formContainer w-1/3">
+		<div class="formContent">
+			<form class="w-full max-w-sm pt-10" action="{% url 'signup' %}" autocomplete="off" method="POST">
+				<h2 class="text-3xl text-white ml-40">Signup</h2>
+  				<div class="loginHeading mb-16 ml-16"></div>
+				{% csrf_token %}
+				{% for field in form %}
+					<div class="md:flex md:items-center mb-6">
+					    <div class="md:w-1/3">
+					      <label class="block text-white text-l font-bold md:text-right mb-1 md:mb-0 pr-4" for="{{field.id_for_label}}">
+					        {{field.html_name|capfirst}}
+					      </label>
+					    </div>
+					    <div class="md:w-2/3">{{field}}
+					    </div>
+					    {% if error in field.errors %}
+							{{error}}
+						{% endif %}
+					</div>
+				{% endfor %}
+				<div class="md:flex md:items-center">
+			    	<div class="md:w-1/3"></div>
+			    	<div class="md:w-2/3">
+			      	<button class="shadow bg-blue-500 hover:bg-blue-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 mt-5 ml-10 rounded" type="submit">
+			        Sign Up
+			      	</button>
+			    </div>
+			  </div>
+			  <div>
+			  	<p class="inline-block align-baseline font-bold ml-20 text-s text-blue-500 mt-4">Already have an account? <span><a href="{% url 'login' %}">
+        		<span class="text-white">SignIn</span>
+      		  </a></span></p>
+			  </div>
+			</form>
+		</div>	
+	</div>
+	<p class="text-center text-gray-500 text-s">
+    	&copy;2020 Unexplored. All rights reserved.
+  	</p>
+
+
+{% endblock %}

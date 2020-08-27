@@ -1,0 +1,94 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	background-color: hsl(0, 0%, 98%);
+	font-family: 'Roboto Mono', monospace;
+}
+
+.navbar {
+	background-color: #343A40;
+}
+
+.navbar a {
+	color: white;
+}
+
+.navbar nav a:hover {
+	border-bottom: solid white 1px;
+}
+
+.navbar div a {
+	color: gray;
+}
+
+.mainImage {
+	background: url('/static/images/main-image.jpg') center / cover no-repeat;
+	height: 42rem;
+}
+
+.mainHeading {
+	border-bottom: solid black 1px;	
+	font-family: 'Caveat', cursive;
+}
+
+.postsContent {
+	background-color: #343A40;
+}
+
+.postsCategory {
+	margin-left: 16rem;
+}
+
+.formContainer {
+	height: 30rem;
+	margin-top: 4rem;
+	margin-left: 31rem;
+}
+
+.formContent {
+	background-color: #4A5568;
+	width: 28rem;
+	height: 28rem;
+	margin-left: 1.5rem;
+}
+
+.createFormContainer {
+	height: 40rem;
+	margin-top: 3rem;
+	margin-left: 28rem;	
+}
+
+.createPostContent {
+	background-color: #4A5568; 
+	width:37rem;
+	height: 45rem; 
+}
+
+.loginHeading {
+	border-bottom: 2px solid white;
+}
+
+.loginContainer {
+	margin-left: 37rem;
+	margin-top: 10rem;
+}
+
+.loginText {
+	color: white;
+	text-transform: capitalize;
+}
+
+.loginButton {
+	background-color: white;
+	color: gray;
+}
+
