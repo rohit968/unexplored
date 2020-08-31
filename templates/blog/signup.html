@@ -16,11 +16,7 @@
 					        {{field.html_name|capfirst}}
 					      </label>
 					    </div>
-					    <div class="md:w-2/3">{{field}}
-					    </div>
-					    {% if error in field.errors %}
-							{{error}}
-						{% endif %}
+					    {{field}}
 					</div>
 				{% endfor %}
 				<div class="md:flex md:items-center">
